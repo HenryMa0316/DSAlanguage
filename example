@@ -49,3 +49,16 @@ def two_sum(OrionList nums, OrionInt target) -> OrionTuple:
 OrionList arr = [1, 2, 3, 4, 6, 8]
 OrionTuple res = two_sum(arr, 10)
 print(res)
+
+
+
+def heap_sort(OrionList nums) -> OrionList:
+    OrionHeap h = OrionHeap()
+    for (i in range(len(nums))):
+        h.Add(nums[i])
+    OrionList result = []
+    while (len(h) > 0):
+        result.Add(h.Del())
+    return result
+OrionList arr = [8, 3, 1, 9, 4]
+print(heap_sort(arr))
