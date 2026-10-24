@@ -62,3 +62,22 @@ def heap_sort(OrionList nums) -> OrionList:
     return result
 OrionList arr = [8, 3, 1, 9, 4]
 print(heap_sort(arr))
+
+
+
+def max_subarray_sum(OrionList nums) -> OrionInt:
+    if (len(nums) == 0):
+        return 0
+    OrionInt current_sum = 0
+    OrionInt min_prefix = 0
+    OrionInt max_sum = nums[0]
+    for (i in range(len(nums))):
+        current_sum = current_sum + nums[i]
+        OrionInt current_max = current_sum - min_prefix
+        if (current_max > max_sum):
+            max_sum = current_max
+        if (current_sum < min_prefix):
+            min_prefix = current_sum
+    return max_sum
+OrionList arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+print(max_subarray_sum(arr))
