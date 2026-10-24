@@ -1,0 +1,15 @@
+{
+  "name": "z_orion",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "z_orion_bg.wasm",
+    "z_orion.js",
+    "z_orion.d.ts"
+  ],
+  "main": "z_orion.js",
+  "types": "z_orion.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}

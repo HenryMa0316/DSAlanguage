@@ -1,0 +1,8 @@
+body { margin: 0; padding: 16px; font-family: system-ui; }
+#editor { border: 1px solid #ccc; margin-bottom: 8px; }
+.cm-editor { min-height: 300px; }
+#output { background: #1e1e1e; color: #d4d4d4; padding: 12px; min-height: 100px; white-space: pre-wrap; }
+#stdin { width: 100%; box-sizing: border-box; margin-bottom: 8px; height: 60px; }
+button { padding: 8px 24px; margin-bottom: 12px; cursor: pointer; }
+.error { color: red; background: #ffeeee; padding: 12px; }
+.stats { color: #666; background: #f0f0f0; padding: 12px; }
