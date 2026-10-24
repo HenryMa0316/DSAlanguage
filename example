@@ -22,3 +22,12 @@ def bfs(OrionList grid, OrionInt start_x, OrionInt start_y, OrionInt target) -> 
     return -1
 OrionList map = [[0, 0, 0, 0],[0, -1, 0, 0],[0, 0, 9, 0]]
 print(bfs(map, 0, 0, 9))
+
+
+
+def fib(OrionInt n) -> OrionInt:
+    if (n <= 1):
+        return n
+    return fib(n - 1) + fib(n - 2)
+OrionInt result = fib(10)
+print(result)
