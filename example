@@ -1,0 +1,24 @@
+def bfs(OrionList grid, OrionInt start_x, OrionInt start_y, OrionInt target) -> OrionInt:
+    OrionList queue = [[start_x, start_y, 0]]
+    OrionInt head = 0
+    while (head < len(queue)):
+        OrionList node = queue[head]
+        head = head + 1
+        OrionInt x = node[0]
+        OrionInt y = node[1]
+        OrionInt step = node[2]
+        if (x < 0 or x >= len(grid) or y < 0 or y >= len(grid[0])):
+            continue
+        OrionInt val = grid[x][y]
+        if (val == -1):
+            continue 
+        if (val == target):
+            return step
+        grid[x][y] = -1
+        queue.Add([x + 1, y, step + 1])
+        queue.Add([x - 1, y, step + 1])
+        queue.Add([x, y + 1, step + 1])
+        queue.Add([x, y - 1, step + 1])
+    return -1
+OrionList map = [[0, 0, 0, 0],[0, -1, 0, 0],[0, 0, 9, 0]]
+print(bfs(map, 0, 0, 9))
