@@ -31,3 +31,21 @@ def fib(OrionInt n) -> OrionInt:
     return fib(n - 1) + fib(n - 2)
 OrionInt result = fib(10)
 print(result)
+
+
+
+def two_sum(OrionList nums, OrionInt target) -> OrionTuple:
+    OrionInt left = 0
+    OrionInt right = len(nums) - 1
+    while (left < right):
+        OrionInt sum = nums[left] + nums[right]
+        if (sum == target):
+            return OrionTuple(left, right)
+        elif (sum < target):
+            left = left + 1
+        else:
+            right = right - 1
+    return OrionTuple(-1, -1)
+OrionList arr = [1, 2, 3, 4, 6, 8]
+OrionTuple res = two_sum(arr, 10)
+print(res)
